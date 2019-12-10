@@ -101,11 +101,15 @@ void readSerial1() {
               String d1_1 = getValue(myString, '\t', 4);
               String b1_0 = getValue(myString, '\t', 5);
               String b1_1 = getValue(myString, '\t', 6);
-              if (d1_0 != "" && d1_1 != "" && b1_0 != "" && b1_1 != "") {
+              if (d1_0 != "" && d1_1 != "") {
                 d1[0] = d1_0.toFloat(); d1[1] = d1_1.toFloat();
-                b1[0] = b1_0.toFloat(); b1[1] = b1_1.toFloat();
               } else {
                 d1[0] = LOST_TRACKING; d1[1] = LOST_TRACKING;
+              }
+
+              if (b1_0 != "" && b1_1 != "") {
+                b1[0] = b1_0.toFloat(); b1[1] = b1_1.toFloat();
+              } else {
                 b1[0] = LOST_TRACKING; b1[1] = LOST_TRACKING;
               }
               correspondence_count |= 0b1;
@@ -116,9 +120,13 @@ void readSerial1() {
               String b2_1 = getValue(myString, '\t', 6);
               if (d2_0 != "" && d2_1 != "") {
                 d2[0] = d2_0.toFloat(); d2[1] = d2_1.toFloat();
-                b2[0] = b2_0.toFloat(); b2[1] = b2_1.toFloat();
               } else {
                 d2[0] = LOST_TRACKING; d2[1] = LOST_TRACKING;
+              }
+
+              if (b2_0 != "" && b2_1 != "") {
+                b2[0] = b2_0.toFloat(); b2[1] = b2_1.toFloat();
+              } else {
                 b2[0] = LOST_TRACKING; b2[1] = LOST_TRACKING;
               }
               correspondence_count |= 0b10;
@@ -166,11 +174,15 @@ void readSerial2() {
               String d3_1 = getValue(myString, '\t', 4);
               String b3_0 = getValue(myString, '\t', 5);
               String b3_1 = getValue(myString, '\t', 6);
-              if (d3_0 != "" && d3_1 != "" && b3_0 != "" && b3_1 != "") {
+              if (d3_0 != "" && d3_1 != "") {
                 d3[0] = d3_0.toFloat(); d3[1] = d3_1.toFloat();
-                b3[0] = b3_0.toFloat(); b3[1] = b3_1.toFloat();
               } else {
                 d3[0] = LOST_TRACKING; d3[1] = LOST_TRACKING;
+              }
+
+              if (b3_0 != "" && b3_1 != "") {
+                b3[0] = b3_0.toFloat(); b3[1] = b3_1.toFloat();
+              } else {
                 b3[0] = LOST_TRACKING; b3[1] = LOST_TRACKING;
               }
               correspondence_count |= 0b100;
@@ -179,11 +191,15 @@ void readSerial2() {
               String d4_1 = getValue(myString, '\t', 4);
               String b4_0 = getValue(myString, '\t', 5);
               String b4_1 = getValue(myString, '\t', 6);
-              if (d4_0 != "" && d4_1 != "" && b4_0 != "" && b4_1 != "") {
+              if (d4_0 != "" && d4_1 != "") {
                 d4[0] = d4_0.toFloat(); d4[1] = d4_1.toFloat();
-                b4[0] = b4_0.toFloat(); b4[1] = b4_1.toFloat();
               } else {
                 d4[0] = LOST_TRACKING; d4[1] = LOST_TRACKING;
+              }
+
+              if (b4_0 != "" && b4_1 != "") {
+                b4[0] = b4_0.toFloat(); b4[1] = b4_1.toFloat();
+              } else {
                 b4[0] = LOST_TRACKING; b4[1] = LOST_TRACKING;
               }
               correspondence_count |= 0b1000;
